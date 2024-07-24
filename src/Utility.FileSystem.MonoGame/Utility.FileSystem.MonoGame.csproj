@@ -4,6 +4,7 @@
 		<TargetFrameworks>uap10.0.19041;net8.0-ios;net8.0-android;net8.0-windows</TargetFrameworks>
 		<RootNamespace>Utility.FileSystem</RootNamespace>
 		<LangVersion>latest</LangVersion>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
+
+	<PropertyGroup>
+		<TargetFrameworks>uap10.0.19041;net8.0-ios;net8.0-android;net8.0-windows</TargetFrameworks>
+		<RootNamespace>Utility.FileSystem</RootNamespace>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows'">
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <PackageReference Include="MonoGame.Framework.iOS" Version="3.8.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <PackageReference Include="MonoGame.Framework.Android" Version="3.8.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'uap10.0.19041'">
+    <PackageReference Include="MonoGame.Framework.WindowsUniversal" Version="3.8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Utility.FileSystem.Abstractions\Utility.FileSystem.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

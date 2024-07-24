@@ -13,6 +13,6 @@ public class FileSystem : IFileSystem
     public Task<Stream> OpenStreamAsync(string filename)
     {
         Debug.Assert(!string.IsNullOrEmpty(filename));
-        return Task.FromResult((Stream)File.Open(filename, FileMode.Open));
+        return Task.FromResult((Stream)File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.Read));
     }
 }

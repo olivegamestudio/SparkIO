@@ -28,6 +28,15 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
+      - name: Install workloads 1
+        run: dotnet workload install wasm-tools
+
+      - name: Install workloads
+        run: dotnet workload install android
+      
+      - name: Install workloads
+        run: dotnet workload install ios
+
       - name: Restore dependencies
         run: dotnet restore
 

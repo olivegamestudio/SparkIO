@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkIO.Abstractions", "src\SparkIO.Abstractions\SparkIO.Abstractions.csproj", "{DC99C204-DD1B-4057-B246-69E2D24A6019}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkIO", "src\SparkIO\SparkIO.csproj", "{2F7353E1-F56F-4367-B08D-5B98E80218A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkIO.Fakes", "src\SparkIO.Fakes\SparkIO.Fakes.csproj", "{2180E33B-B718-4657-9617-F9C11340030B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkIO.MonoGame", "src\SparkIO.MonoGame\SparkIO.MonoGame.csproj", "{B72C6B0D-594F-413D-926C-955876412C3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC99C204-DD1B-4057-B246-69E2D24A6019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC99C204-DD1B-4057-B246-69E2D24A6019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC99C204-DD1B-4057-B246-69E2D24A6019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC99C204-DD1B-4057-B246-69E2D24A6019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F7353E1-F56F-4367-B08D-5B98E80218A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F7353E1-F56F-4367-B08D-5B98E80218A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F7353E1-F56F-4367-B08D-5B98E80218A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F7353E1-F56F-4367-B08D-5B98E80218A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2180E33B-B718-4657-9617-F9C11340030B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2180E33B-B718-4657-9617-F9C11340030B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2180E33B-B718-4657-9617-F9C11340030B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2180E33B-B718-4657-9617-F9C11340030B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72C6B0D-594F-413D-926C-955876412C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72C6B0D-594F-413D-926C-955876412C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72C6B0D-594F-413D-926C-955876412C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72C6B0D-594F-413D-926C-955876412C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A39E5CB-F600-44D2-A6E9-36B525961891}
+	EndGlobalSection
+EndGlobal

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Utility;
+namespace SparkIO;
 
 /// <summary>
 /// Defines a set of methods for working with the file system by using MonoGame calls.

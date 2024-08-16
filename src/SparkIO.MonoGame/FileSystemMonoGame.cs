@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Xna.Framework;
 
-namespace Utility;
+namespace SparkIO;
 
 /// <summary>
 /// Defines a set of methods for working with the file system by using MonoGame calls.

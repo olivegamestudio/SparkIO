@@ -2,8 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	  <RootNamespace>Utility</RootNamespace>
+	  <RootNamespace>SparkIO</RootNamespace>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SparkIO.Abstractions\SparkIO.Abstractions.csproj" />
+  </ItemGroup>
 
 </Project>

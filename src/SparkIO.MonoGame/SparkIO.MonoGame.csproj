@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>uap10.0.19041;net8.0-ios;net8.0-android;net8.0-windows</TargetFrameworks>
-		<RootNamespace>Utility.FileSystem</RootNamespace>
+		<RootNamespace>SparkIO</RootNamespace>
 		<LangVersion>latest</LangVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Utility.FileSystem.Abstractions\Utility.FileSystem.Abstractions.csproj" />
+    <ProjectReference Include="..\SparkIO.Abstractions\SparkIO.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

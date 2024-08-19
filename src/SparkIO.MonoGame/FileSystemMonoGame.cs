@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Xna.Framework;
+using Utility;
 
 namespace SparkIO;
 
@@ -10,13 +11,9 @@ namespace SparkIO;
 /// </summary>
 public class FileSystemMonoGame : IFileSystem
 {
-    readonly ILogger<FileSystemMonoGame>? _logger;
+    readonly ILogger<FileSystemMonoGame> _logger;
 
-    public FileSystemMonoGame()
-    {
-    }
-
-    public FileSystemMonoGame(ILogger<FileSystemMonoGame> logger)
+    public FileSystemMonoGame(ILogger<FileSystemMonoGame> logger = null)
     {
         _logger = logger;
     }
@@ -24,7 +21,8 @@ public class FileSystemMonoGame : IFileSystem
     /// <inheritdoc />
     public Task<Stream> OpenStreamAsync(string filename)
     {
-        _logger?.LogInformation($"Loading texture: '{filename}'...");
+        filename = Guard.ThrowIfStringNullOrEmpty(filename);
+        _logger?.LogInformation($"Opening stream: '{filename}'...");
         return Task.FromResult(TitleContainer.OpenStream(filename));
     }
 }

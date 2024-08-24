@@ -1,0 +1,50 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Fetch tags
+      run: git fetch --prune --unshallow --tags
+  
+    - name: Install Maui Workload
+      run: dotnet workload install maui --ignore-failed-sources
+
+    - name: Install Android Workload
+      run: dotnet workload install android --ignore-failed-sources
+
+    - name: Install iOS Workload
+      run: dotnet workload install ios --ignore-failed-sources
+
+    - name: Install MAUI workload
+      run: dotnet workload install maui --ignore-failed-sources
+      
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Publish Nuget
+      run: |
+        dotnet nuget push '**/*.nupkg' -k ${NUGET} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
+      env:
+        NUGET: ${{ secrets.NUGET }}

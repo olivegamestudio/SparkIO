@@ -5,6 +5,7 @@
 		<RootNamespace>SparkIO</RootNamespace>
 		<LangVersion>latest</LangVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<EnableWindowsTargeting>true</EnableWindowsTargeting>
 	</PropertyGroup>
 
 	<ItemGroup>
